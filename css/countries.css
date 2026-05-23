@@ -214,7 +214,7 @@
   }
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap"); */
 
 /* ============================================================
    SERVICES PAGE CSS
@@ -719,4 +719,14 @@
   .services-hero h1 {
     font-size: 46px;
   }
+}
+
+.country-card,
+.country-item,
+.countries-grid,
+.all-countries,
+.all-countries * {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
 }
