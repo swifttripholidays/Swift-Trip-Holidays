@@ -1,0 +1,16 @@
+/* FINAL VISIBILITY FIX */
+
+[data-aos] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.country-card,
+.card,
+.policy-card,
+.glass-card,
+.timeline-item,
+.process-card {
+  opacity: 1;
+  visibility: visible;
+}
