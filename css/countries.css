@@ -721,12 +721,15 @@
   }
 }
 
-.country-card,
-.country-item,
-.countries-grid,
-.all-countries,
-.all-countries * {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
+.countries-section,
+.container,
+.section-header,
+.section-label,
+.section-title,
+.section-title span,
+.section-desc,
+.countries-section * {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
 }
