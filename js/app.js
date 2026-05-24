@@ -812,7 +812,7 @@ document.addEventListener("DOMContentLoaded", () => {
             Public Key:  Go to emailjs.com → Account → API Keys
           */
           await emailjs.sendForm(
-            "service_so7sf9k" /* ← Replace this */,
+            "service_jph6m4h" /* ← Replace this */,
             "template_idc7jca" /* ← Replace this */,
             contactForm,
             "_s4w3GtgFpIO3lZPL" /* ← Replace this */

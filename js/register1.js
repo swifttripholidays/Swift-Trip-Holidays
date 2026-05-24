@@ -174,39 +174,9 @@ submitBtn.addEventListener("click", function (e) {
 
     gender: document.querySelector('input[name="gender"]:checked')?.value || "",
 
-    marital_status: document.querySelector('input[name="marital_status"]:checked')?.value || "",
-
     passport: document.getElementById("passport")?.value || "",
 
-    passport_issue: document.getElementById("passport_issue")?.value || "",
-
-    passport_expiry: document.getElementById("passport_expiry")?.value || "",
-
-    passport_country: document.getElementById("passport_country")?.value || "",
-
-    brp_number: document.getElementById("brp_number")?.value || "",
-
-    brp_expiry: document.getElementById("brp_expiry")?.value || "",
-
-    uk_status: document.querySelector('input[name="uk_status"]:checked')?.value || "",
-
     destination: document.getElementById("destination")?.value || "",
-
-    travel_date: document.getElementById("travel_date")?.value || "",
-
-    return_date: document.getElementById("return_date")?.value || "",
-
-    duration: document.getElementById("duration")?.value || "",
-
-    purpose: document.querySelector('input[name="purpose"]:checked')?.value || "",
-
-    employment: document.querySelector('input[name="employment"]:checked')?.value || "",
-
-    employer_name: document.getElementById("employer_name")?.value || "",
-
-    company_name: document.getElementById("company_name")?.value || "",
-
-    monthly_income: document.getElementById("monthly_income")?.value || "",
 
     documents: [...document.querySelectorAll('input[name="documents"]:checked')]
       .map((doc) => doc.value)
