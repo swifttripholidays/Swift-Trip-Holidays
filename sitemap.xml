@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- HOME -->
+  <url>
+    <loc>https://www.swifttripholidays.co.uk/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- INDEX -->
+  <url>
+    <loc>https://www.swifttripholidays.co.uk/index.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ABOUT -->
+  <url>
+    <loc>https://www.swifttripholidays.co.uk/about.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- SERVICES -->
+  <url>
+    <loc>https://www.swifttripholidays.co.uk/services.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- COUNTRIES -->
+  <url>
+    <loc>https://www.swifttripholidays.co.uk/countries.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- SUCCESS STORIES -->
+  <url>
+    <loc>https://www.swifttripholidays.co.uk/successstories.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- CONTACT -->
+  <url>
+    <loc>https://www.swifttripholidays.co.uk/contact.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- FRANCE -->
+  <url>
+    <loc>https://www.swifttripholidays.co.uk/countries.html#france</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ITALY -->
+  <url>
+    <loc>https://www.swifttripholidays.co.uk/countries.html#italy</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- GERMANY -->
+  <url>
+    <loc>https://www.swifttripholidays.co.uk/countries.html#germany</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- SPAIN -->
+  <url>
+    <loc>https://www.swifttripholidays.co.uk/countries.html#spain</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- NETHERLANDS -->
+  <url>
+    <loc>https://www.swifttripholidays.co.uk/countries.html#netherlands</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
