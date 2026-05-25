@@ -12,6 +12,7 @@ Disallow: /cgi-bin/
 # Hide registration pages from crawlers
 Disallow: /register.html
 Disallow: /register1.html
+Disallow: /thankyou.html
 
 # Allow important assets
 Allow: /assets/
