@@ -1,23 +1,26 @@
 User-agent: *
+
+# Allow website crawling
 Allow: /
 
-# Sitemap
-Sitemap: https://swifttripholidays.netlify.app/sitemap.xml
+# Block private/register pages
+Disallow: /register
+Disallow: /register1
+Disallow: /register.html
+Disallow: /register1.html
 
-# Block system folders
+# Block system/private folders (future use)
 Disallow: /admin/
 Disallow: /private/
 Disallow: /cgi-bin/
 
-# Hide registration pages from crawlers
-Disallow: /register.html
-Disallow: /register1.html
-Disallow: /thankyou.html
-
-# Allow important assets
+# Allow assets
 Allow: /assets/
 Allow: /css/
 Allow: /js/
 
-# Crawl delay
+# Sitemap
+Sitemap: https://swifttripholidays.netlify.app/sitemap.xml
+
+# Optional crawl delay
 Crawl-delay: 2
