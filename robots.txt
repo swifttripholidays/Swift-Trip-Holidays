@@ -9,6 +9,10 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /cgi-bin/
 
+# Hide registration pages from crawlers
+Disallow: /register.html
+Disallow: /register1.html
+
 # Allow important assets
 Allow: /assets/
 Allow: /css/
@@ -16,7 +20,3 @@ Allow: /js/
 
 # Crawl delay
 Crawl-delay: 2
-
-User-agent: *
-Disallow: /register.html
-Disallow: /register1.html
