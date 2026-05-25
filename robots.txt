@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.swifttripholidays.co.uk/sitemap.xml
+Sitemap: https://swifttripholidays.netlify.app/sitemap.xml
 
 # Block system folders
 Disallow: /admin/
@@ -16,3 +16,7 @@ Allow: /js/
 
 # Crawl delay
 Crawl-delay: 2
+
+User-agent: *
+Disallow: /register.html
+Disallow: /register1.html
