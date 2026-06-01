@@ -20,7 +20,7 @@ Allow: /css/
 Allow: /js/
 
 # Sitemap
-Sitemap: https://swifttripholidays.netlify.app/sitemap.xml
+Sitemap: https://swifttripholidays.co.uk/sitemap.xml
 
 # Optional crawl delay
 Crawl-delay: 2
