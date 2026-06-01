@@ -3,12 +3,6 @@ User-agent: *
 # Allow website crawling
 Allow: /
 
-# Block private/register pages
-Disallow: /register
-Disallow: /register1
-Disallow: /register.html
-Disallow: /register1.html
-
 # Block system/private folders (future use)
 Disallow: /admin/
 Disallow: /private/
