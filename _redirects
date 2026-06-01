@@ -7,8 +7,7 @@
 /success-stories /success-stories.html 200
 /terms /terms.html 200
 /thankyou /thankyou.html 200
+/register /register.html 200
 
 # Block register pages from direct access (optional)
 # Uncomment if you want to fully redirect visitors away
-# /register / 301
-# /thankyou /thankyou.html 200
