@@ -929,3 +929,61 @@ document.addEventListener("DOMContentLoaded", () => {
   ratingBars.forEach((bar) => barObserver.observe(bar));
 
 }); /* END — single DOMContentLoaded */
+
+
+const FIVE_HOURS = 5 * 60 * 60 * 1000;
+
+function getEndTime() {
+
+  let end = localStorage.getItem("offerEndTime");
+
+  if (!end || Date.now() > end) {
+
+    end = Date.now() + FIVE_HOURS;
+
+    localStorage.setItem("offerEndTime", end);
+
+  }
+
+  return parseInt(end);
+
+}
+
+let endTime = getEndTime();
+
+function updateCountdown() {
+
+  const now = Date.now();
+
+  let distance = endTime - now;
+
+  if (distance <= 0) {
+
+    endTime = Date.now() + FIVE_HOURS;
+
+    localStorage.setItem("offerEndTime", endTime);
+
+    distance = FIVE_HOURS;
+
+  }
+
+  const hours = Math.floor(distance / (1000 * 60 * 60));
+
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("hours").textContent =
+    String(hours).padStart(2, "0");
+
+  document.getElementById("minutes").textContent =
+    String(minutes).padStart(2, "0");
+
+  document.getElementById("seconds").textContent =
+    String(seconds).padStart(2, "0");
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown, 1000);
