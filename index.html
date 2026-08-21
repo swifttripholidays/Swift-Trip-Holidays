@@ -1804,33 +1804,6 @@
   <button id="scroll-top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
-  const fill = document.querySelector(".progress-fill");
-  const percent = document.querySelector(".progress-percent");
-  const loader = document.getElementById("preloader");
-
-  let value = 0;
-
-  const interval = setInterval(() => {
-
-  value++;
-
-  fill.style.width = value + "%";
-
-  percent.innerHTML = value + "%";
-
-  if(value >= 100){
-
-  clearInterval(interval);
-
-  setTimeout(()=>{
-
-  loader.classList.add("hide");
-
-  },300);
-
-  }
-
-  },18);
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
