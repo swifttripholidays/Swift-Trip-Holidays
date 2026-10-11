@@ -44,3 +44,9 @@ The Services page includes a mobile-accessible navigation drawer, card-grid brea
 ### Global Christmas decorations
 
 A shared, pointer-events-free snowfall layer and animated Santa corner stickers are mounted by the React app on every route. The shared stylesheet is served from `public/css/sitewide-christmas-effects.css`. Snow is disabled when the visitor requests reduced motion.
+
+### PostCSS build configuration
+
+This project currently uses plain CSS and does not require Tailwind CSS. The Vite config declares an empty inline PostCSS plugin list so a parent-level `D:\postcss.config.mjs` cannot break the build by requiring `@tailwindcss/postcss`. A local `postcss.config.mjs` is included for other tooling.
+
+If you intentionally add Tailwind CSS later, install its matching dependencies and update the project-local config rather than relying on a PostCSS config in a parent directory.

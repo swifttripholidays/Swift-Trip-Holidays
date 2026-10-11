@@ -1,0 +1,511 @@
+/*=========================================
+PRELOADER
+=========================================*/
+
+#preloader {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: var(--primary-dark);
+    overflow: hidden;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .8s ease, visibility .8s ease;
+}
+
+#preloader.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/*=========================================
+BACKGROUND
+=========================================*/
+
+.preloader-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.bg-gradient {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at center,
+            rgba(247, 148, 29, .08) 0%,
+            rgba(27, 58, 107, .18) 35%,
+            rgba(13, 31, 60, 1) 100%);
+}
+
+.bg-light {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            rgba(247, 148, 29, .10) 0%,
+            rgba(27, 58, 107, .12) 45%,
+            transparent 75%);
+    animation: bgPulse 6s ease-in-out infinite;
+}
+
+.bg-noise {
+    position: absolute;
+    inset: 0;
+    opacity: .04;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .08) 1px, transparent 1px);
+    background-size: 90px 90px;
+}
+
+@keyframes bgPulse {
+
+    0%,
+    100% {
+
+        transform: translate(-50%, -50%) scale(1);
+
+        opacity: .9;
+
+    }
+
+    50% {
+
+        transform: translate(-50%, -50%) scale(1.08);
+
+        opacity: 1;
+
+    }
+
+}
+
+/*=========================================
+CONTENT
+=========================================*/
+
+.preloader-content {
+
+    position: relative;
+
+    z-index: 20;
+
+    width: min(90%, 720px);
+
+    text-align: center;
+
+    top: 5%;
+
+
+
+}
+
+/*=========================================
+LOGO
+=========================================*/
+
+.logo-box {
+
+    position: relative;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 130px;
+
+    height: 130px;
+
+    margin-bottom: 35px;
+
+}
+
+.logo-border {
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(247, 148, 29, .25);
+
+}
+
+.preloader-logo {
+
+    width: 88px;
+
+    position: relative;
+
+    z-index: 2;
+
+    opacity: 0;
+
+    transform: scale(.85);
+
+}
+
+/*=========================================
+TITLE
+=========================================*/
+
+.preloader-title {
+
+    margin: 0;
+
+    font-family: var(--font-display);
+
+    font-size: 52px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+
+    color: var(--white);
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+}
+
+.preloader-title .trip {
+
+    color: var(--secondary);
+
+}
+
+.preloader-title small {
+
+    display: block;
+
+    margin-top: 10px;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: var(--mid-gray);
+
+}
+
+/*=========================================
+TAGLINE
+=========================================*/
+
+.preloader-tagline {
+
+    margin-top: 22px;
+
+    font-size: 18px;
+
+    font-family: var(--font-body);
+
+    color: var(--body-text);
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+}
+
+/*=========================================
+FLIGHT SECTION
+=========================================*/
+
+.flight-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 70px auto 45px;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+}
+
+.flight-svg {
+
+    width: 100%;
+
+    height: 110px;
+
+    overflow: visible;
+
+}
+
+#flightPath {
+
+    fill: none;
+
+    stroke: rgba(255, 255, 255, .18);
+
+    stroke-width: 2;
+
+    stroke-linecap: round;
+
+    stroke-dasharray: 10 10;
+
+}
+
+#airplane {
+
+    fill: var(--secondary);
+
+    filter: drop-shadow(0 0 15px rgba(247, 148, 29, .45));
+
+    transform-origin: center;
+
+}
+
+/*=========================================
+LOADING TEXT
+=========================================*/
+
+.loading-text {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-family: var(--font-sub);
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: var(--mid-gray);
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+}
+
+.dots {
+
+    display: flex;
+
+    gap: 6px;
+
+}
+
+.dots span {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--secondary);
+
+    opacity: .2;
+
+    animation: dotBlink 1.5s infinite;
+
+}
+
+.dots span:nth-child(2) {
+
+    animation-delay: .25s;
+
+}
+
+.dots span:nth-child(3) {
+
+    animation-delay: .5s;
+
+}
+
+@keyframes dotBlink {
+
+    0%,
+    100% {
+
+        opacity: .2;
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform: scale(1.35);
+
+    }
+
+}
+
+/*=========================================
+LOGO RING
+=========================================*/
+
+.logo-border {
+
+    animation: ringRotate 10s linear infinite;
+
+}
+
+.logo-border::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -8px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, .05);
+
+}
+
+.logo-border::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: -3px;
+
+    left: 50%;
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--secondary);
+
+    transform: translateX(-50%);
+
+    box-shadow: 0 0 15px rgba(247, 148, 29, .6);
+
+}
+
+@keyframes ringRotate {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media (max-width:991px) {
+
+    .preloader-title {
+
+        font-size: 42px;
+
+    }
+
+    .preloader-tagline {
+
+        font-size: 16px;
+
+    }
+
+    .flight-wrapper {
+
+        margin: 55px auto 40px;
+
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .logo-box {
+
+        width: 105px;
+
+        height: 105px;
+
+    }
+
+    .preloader-logo {
+
+        width: 72px;
+
+    }
+
+    .preloader-title {
+
+        font-size: 34px;
+
+    }
+
+    .preloader-title small {
+
+        font-size: 14px;
+
+        letter-spacing: 3px;
+
+    }
+
+    .preloader-tagline {
+
+        font-size: 15px;
+
+    }
+
+    .flight-wrapper {
+
+        margin: 45px auto 35px;
+
+    }
+
+    .loading-text {
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+
+    }
+
+}

@@ -16,6 +16,7 @@
   color: rgba(255, 255, 255, 0.65);
     margin: 0;
     padding: 0;
+}
 
 .contact-social {
   --primary: #1b3a6b;
@@ -405,4 +406,3 @@
     transform: none;
   }
 }
-   }

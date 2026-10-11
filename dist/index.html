@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/preloader.css" />
+    <link rel="stylesheet" href="/css/christmas.css" />
+    <link rel="stylesheet" href="/css/sitewide-christmas-effects.css" />
+    <link rel="stylesheet" href="/css/services-page.css" />
+    <script>
+      // Load page-specific CSS as ordinary stylesheets, never as JavaScript modules.
+      (function () {
+        var path = window.location.pathname.replace(/\/$/, '') || '/';
+        var styles = [];
+        if (path === '/register' || path === '/register.html') styles.push('/css/register.css');
+        if (path === '/terms' || path === '/terms.html') styles.push('/css/terms.css');
+        if (path === '/countries' || path === '/countries.html') styles.push('/css/countries.css');
+        if (path === '/links/allaccounts' || path === '/links/allaccounts.html') styles.push('/css/contact-social-card.css');
+        styles.forEach(function (href) {
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = href;
+          document.head.appendChild(link);
+        });
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+    <title>Swift Trip Holidays</title>
+    <script type="module" crossorigin src="/assets/index-CugrRmLI.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BUNA8RkD.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

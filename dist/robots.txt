@@ -1,0 +1,20 @@
+User-agent: *
+
+# Allow website crawling
+Allow: /
+
+# Block system/private folders (future use)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+
+# Allow assets
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+
+# Sitemap
+Sitemap: https://swifttripholidays.co.uk/sitemap.xml
+
+# Optional crawl delay
+Crawl-delay: 2
