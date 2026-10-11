@@ -5846,15 +5846,7 @@ p {
   }
 }
 
-.country-card,
-.country-item,
-.countries-grid,
-.all-countries,
-.all-countries * {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: none !important;
-}
+/* Removed a legacy force-visible override that disabled scroll animations. */
 
 /* ============================================================
    TERMS PAGE

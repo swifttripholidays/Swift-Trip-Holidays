@@ -1,22 +1,2 @@
-# 1. Clean URLs: Redirect extension to clean path
-/about.html              /about              301
-/contact.html            /contact            301
-/countries.html          /countries          301
-/register.html           /register           301
-/success-stories.html    /success-stories    301
-/terms.html              /terms              301
-/thankyou.html           /thankyou           301
-/links/allaccounts.html  /links/allaccounts  301
-
-# 2. Rewrite Rules: Serve the HTML content behind the clean URL
-/about              /about.html              200
-/contact            /contact.html            200
-/countries          /countries.html          200
-/register           /register.html           200
-/success-stories    /success-stories.html    200
-/terms              /terms.html              200
-/thankyou           /thankyou.html           200
-/links/allaccounts  /links/allaccounts.html  200
-
-# 3. Custom 404 Page (Fallback)
-/*                  /thankyou.html           404
+# React/Vite SPA fallback: direct navigation to each clean route loads the React entry.
+/* /index.html 200

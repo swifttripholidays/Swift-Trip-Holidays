@@ -117,13 +117,14 @@
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
   width: 100%;
   padding: 16px 18px;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: rgba(255, 255, 255, 0.06);
-  color: rgb(119, 75, 75);
+  color: var(--white);
   font-size: 1rem;
   outline: none;
 }
@@ -283,12 +284,28 @@ textarea.error {
 
 @media (max-width: 900px) {
   .grid-2,
-  .check-grid,
-  .progress-steps {
+  .check-grid {
     grid-template-columns: 1fr;
+  }
+
+  .progress-steps {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
   }
 
   .register-container {
     padding: 30px 20px;
   }
+}
+
+@media (max-width: 520px) {
+  .register-page { padding: 112px 12px 48px; }
+  .register-container { padding: 24px 16px; border-radius: 22px; }
+  .register-header { margin-bottom: 30px; }
+  .register-header h1 { font-size: clamp(2rem, 9vw, 2.8rem); }
+  .form-step h2 { font-size: 1.55rem; margin-bottom: 24px; }
+  .progress-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .btn-wrap { gap: 10px; }
+  .next-btn, .prev-btn, .submit-btn, .clear-btn { flex: 1 1 130px; padding: 14px 16px; }
+  .toast { left: 12px; right: 12px; bottom: 12px; max-width: none; }
 }

@@ -1,0 +1,117 @@
+/* Global Christmas ambience — shared across every React route.
+   All decorations ignore pointer input so navigation and forms remain usable. */
+.global-christmas-effects {
+  position: fixed;
+  inset: 0;
+  z-index: 7995;
+  pointer-events: none;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.global-snowfall {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.global-snowfall__flake {
+  position: absolute;
+  top: -12vh;
+  left: var(--flake-left);
+  color: rgba(255, 255, 255, 0.96);
+  font-size: var(--flake-size);
+  line-height: 1;
+  opacity: var(--flake-opacity);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 1px 4px rgba(28, 62, 100, 0.24);
+  will-change: transform;
+  animation: global-snowfall-drift var(--flake-duration) var(--flake-delay) linear infinite;
+}
+
+@keyframes global-snowfall-drift {
+  0% {
+    transform: translate3d(0, -12vh, 0) rotate(0deg);
+  }
+  48% {
+    transform: translate3d(calc(var(--flake-drift) * 0.55), 49vh, 0) rotate(180deg);
+  }
+  100% {
+    transform: translate3d(var(--flake-drift), 112vh, 0) rotate(360deg);
+  }
+}
+
+.global-santa {
+  position: absolute;
+  bottom: max(14px, env(safe-area-inset-bottom));
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 18px 18px 20px 20px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 245, 232, 0.72));
+  box-shadow: 0 8px 24px rgba(10, 31, 59, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  animation: global-santa-bob 4.2s ease-in-out infinite;
+}
+
+.global-santa--left {
+  left: max(12px, env(safe-area-inset-left));
+  transform: rotate(-7deg);
+}
+
+/* Keep clear of the site's fixed WhatsApp and scroll-to-top controls. */
+.global-santa--right {
+  right: max(104px, calc(env(safe-area-inset-right) + 104px));
+  animation-delay: -1.8s;
+  transform: rotate(7deg);
+}
+
+.global-santa__emoji {
+  display: block;
+  font-size: 36px;
+  line-height: 1;
+  filter: drop-shadow(0 3px 3px rgba(20, 37, 57, 0.18));
+}
+
+.global-santa__sparkle {
+  position: absolute;
+  top: -7px;
+  right: -6px;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  border-radius: 50%;
+  background: #ff8b1f;
+  color: #fff;
+  font-size: 11px;
+  box-shadow: 0 3px 9px rgba(255, 139, 31, 0.3);
+}
+
+@keyframes global-santa-bob {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -7px; }
+}
+
+@media (max-width: 600px) {
+  .global-santa {
+    width: 38px;
+    height: 38px;
+    border-radius: 13px;
+    bottom: max(10px, env(safe-area-inset-bottom));
+  }
+  .global-santa--left { left: max(8px, env(safe-area-inset-left)); }
+  .global-santa--right { right: max(91px, calc(env(safe-area-inset-right) + 91px)); }
+  .global-santa__emoji { font-size: 27px; }
+  .global-santa__sparkle { width: 15px; height: 15px; top: -6px; right: -5px; font-size: 8px; }
+  .global-snowfall__flake { text-shadow: 0 0 4px rgba(255,255,255,.55); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .global-snowfall { display: none; }
+  .global-santa { animation: none; }
+}
